@@ -1,0 +1,184 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-card {
+  background: white;
+  width: 100%;
+  max-width: 430px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.product-image {
+  background: #eaf2ff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 50px;
+}
+
+h1 {
+  color: #172554;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.price-box {
+  background: #eff6ff;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.price-box p {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.price-box h2 {
+  color: #2563eb;
+}
+
+.quantity-section h3 {
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.quantity-control button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.quantity-control button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.quantity-control span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.limit {
+  color: #94a3b8;
+  margin: 12px 0 25px;
+  font-size: 13px;
+}
+
+.calculation {
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.calculation div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.calculation span {
+  color: #64748b;
+}
+
+.calculation strong {
+  color: #1e293b;
+  text-align: right;
+}
+
+.calculation .discount {
+  color: #16a34a;
+}
+
+.calculation hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.calculation .final-price {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.final-price strong {
+  color: #2563eb;
+}
+
+.success {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.cart-button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-button:hover {
+  background: #1d4ed8;
+}
+
+.added-message {
+  margin-top: 15px;
+  color: #16a34a;
+  font-weight: bold;
+}
