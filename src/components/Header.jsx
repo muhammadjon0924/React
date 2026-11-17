@@ -1,24 +1,39 @@
-import { useState } from 'react'
-import "./Header.css"
+import { useEffect, useState } from "react";
+import "./Header.css";
 
-export default function Header() {
+function Header() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [count, setCount] = useState(0)
-    const handleMinus =() =>{
-        if (count > 0)
-            setCount(count-1)
-    }
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const data = await res.json();
+        setUsers(data);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    
-    
+    getposts();
+  }, []);
 
+  return (
+    <>
+      <h1>Posts</h1>
 
-
-    return (
-        <div className='wrapper'>
-            <button onClick={() => { setCount(count - 1) }}>-</button>
-            <h1>{count}</h1>
-            <button onClick={() => { setCount(count + 1) }}>+</button>
-        </div>
-    )
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <ol>
+          {users.map((user) => (
+            <li key={user.id}>{user.title}</li>
+          ))}
+        </ol>
+      )}
+    </>
+  );
 }
+
+export default Header;
